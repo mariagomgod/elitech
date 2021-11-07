@@ -52,8 +52,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'helloworld';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-$route['employees']['post'] = 'employees/create';
-$route['employees/(:id)']['get'] = 'employees/read/$1';
-$route['employees/(:id)']['put'] = 'employees/update/$1';
-$route['employees/(:id)']['delete'] = 'employees/delete/$1';
