@@ -20,17 +20,6 @@ class Employees extends CI_Controller {
             redirect('/employees', 'location');
         }
 
-        public function read($id)
-        {
-            $employee = $this->Employeemodel->find_one($id);
-            if (!isset($employee)) 
-            {
-                show_404();
-            }
-            $data['employee'] = $employee;
-            $this->load->view('employee', $data);
-        }
-
         public function update($id)
         {
             $this->Employeemodel->update($id, $this->read_form());  
