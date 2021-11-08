@@ -8,10 +8,24 @@ class Login extends CI_Controller {
         $this->load->model('Loginmodel');
     }
 
+    public function index()
+    {
+        $this->load->view('login');
+    }
+
     public function login()
     {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-        $this->Loginmodel->login($username, $password);
+
+        if ($this->Loginmodel->login($username, $password))
+        {
+            redirect('/employees', 'location');
+        }
+        else
+        {
+            redirect('/login', 'location'); 
+        }
+        
     }
 }

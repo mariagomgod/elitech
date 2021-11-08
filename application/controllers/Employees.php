@@ -17,6 +17,7 @@ class Employees extends CI_Controller {
         public function create()
         {
             $this->Employeemodel->insert($this->read_form());
+            redirect('/employees', 'location');
         }
 
         public function read($id)
@@ -33,11 +34,13 @@ class Employees extends CI_Controller {
         public function update($id)
         {
             $this->Employeemodel->update($id, $this->read_form());  
+            redirect('/employees', 'location');
         }
 
         public function delete($id)
         {
             $this->Employeemodel->delete($id);  
+            redirect('/employees', 'location');
         }
 
         private function read_form()
