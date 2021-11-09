@@ -11,8 +11,8 @@
 
 <body>
   <div>
-    <form method="post" action="/elitech/index.php/login/login">
-      <div class="form-group mx-auto">
+    <form class="w-50 mx-auto" method="post" action="/elitech/index.php/login/login">
+      <div class="form-group">
         <label for="username">Username</label>
         <input type="text" name="username" class="form-control" id="username" placeholder="Username">
       </div>
